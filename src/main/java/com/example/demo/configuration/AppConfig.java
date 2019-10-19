@@ -15,13 +15,14 @@ import java.util.Locale;
 @Configuration
 public class AppConfig {
 
-    @Bean @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    @Bean
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     public NumberFormat getCurrency() {
         return NumberFormat.getCurrencyInstance();
     }
 
     @Bean
-    public NumberFormat getKoreaCurrency(){
+    public NumberFormat getKoreaCurrency() {
         return NumberFormat.getCurrencyInstance(Locale.KOREA);
     }
 }
